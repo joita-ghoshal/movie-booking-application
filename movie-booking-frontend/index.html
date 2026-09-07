@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🎬 Movie Ticket Booking System</h2>
+        
+        <!-- Booking Form -->
+        <form id="bookingForm" class="booking-form">
+            <!-- Hidden input to store booking ID during edit -->
+            <input type="hidden" id="bookingId">
+
+            <div class="input-group">
+                <input type="text" id="customerName" placeholder="Customer Name" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="movieName" placeholder="Movie Name" required>
+            </div>
+            <div class="input-group">
+                <input type="date" id="showDate" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="showTime" placeholder="Show Time (e.g., 06:00 PM)" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="seatNumber" placeholder="Seat Number (e.g., A12)" required>
+            </div>
+            
+            <button type="submit" id="submitBtn" class="btn-submit">Book Ticket Now</button>
+            <button type="button" id="cancelEditBtn" class="btn-cancel-edit" style="display: none;">Cancel Edit</button>
+        </form>
+
+        <!-- Bookings List -->
+        <div class="booking-list-container">
+            <h3>Booked Tickets</h3>
+            <div id="bookingList" class="booking-cards"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
